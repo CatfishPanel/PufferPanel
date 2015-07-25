@@ -51,13 +51,23 @@ $(window).load(function() {
 			var value = $this.val();
 			{% if (extension == "yaml") or (extension == "yml") %}var yamlSpaces = parseInt($("#space_yaml").val());{% endif %}
 			$this.val(value.substring(0, start)
-			+ {% if (extension == "yaml") or (extension == "yml") %}Array(yamlSpaces + 1).join(" "){% else %}"\t"{% endif %}
-			+ value.substring(end));
-			this.selectionStart = this.selectionEnd = start + {% if (extension == "yaml") or (extension == "yml") %}yamlSpaces{% else %}1{% endif %};
-			e.preventDefault();
+			+ {%; if (extension == "yaml") or (extension == "yml") %}Array(yamlSpaces + 1).join(" "){% else %};"\t"{% endif %};
+        +value.substring(end)
+        )
+        this.selectionStart = this.selectionEnd = start + { %
+        if (extension == "yaml") or(extension == "yml") %
+    };
+    yamlSpaces;
+    {% else %
+    };
+    1
+    {%
+        endif %
+    };
+    e.preventDefault();
 		}
-	});
-	{% if permission.has('files.save') %}
+})
+{% if permission.has('files.save') %}
 		$("#save_file").click(function(a) {
 			a.preventDefault();
 			var e = $("input[name='file']").val(),
@@ -78,8 +88,9 @@ $(window).load(function() {
 					$("#save_status").html(a), $("#save_file").html("Save").removeClass("disabled"), $("#save_status").slideDown()
 				}
 			})
-		})
+		});
 	{% endif %}
-});
+    }
+)
 </script>
 {% endblock %}

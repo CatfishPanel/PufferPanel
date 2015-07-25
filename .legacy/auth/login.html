@@ -77,7 +77,7 @@ $(document).ready(function(){
 					$("#openTOTP").modal('show');
 					$('#openTOTP').on('shown.bs.modal', function(){
 						$("#totp_token").focus();
-					})
+					});
                     event.preventDefault();
 				}else{
 					$(this).submit();

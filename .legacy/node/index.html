@@ -136,7 +136,7 @@
 			memoryChart.removeData();
 			if({{ server.cpu_limit }} > 0) { cpuChart.addData([(data.data.cpu / {{ server.cpu_limit }}) * 100], ""); }else{ cpuChart.addData([data.data.cpu], ""); }
 			cpuChart.removeData();
-		});
+		});;
 		socket.on('query', function(data){
 			if($("#players_notice").is(":visible")){
 				$("#players_notice").hide();
@@ -195,23 +195,22 @@
 			showScale: true,
 			barShowStroke: false,
 			scaleOverride: false,
-			tooltipTemplate: {% verbatim %}"<%= value %> Mb"{% endverbatim %},
-			barValueSpacing: 1,
-			barStrokeWidth: 1,
+			tooltipTemplate: {% verbatim %}"<%= value %> Mb";{% endverbatim %};,
+			1,
+                    barStrokeWidth: 1,
 			scaleShowGridLines: false
-		});
+		});;;
 		cpuChart = new Chart(cty).Bar(cpuChartData, {
 			animation: false,
 			showScale: true,
 			barShowStroke: false,
 			scaleOverride: false,
-			tooltipTemplate: {% verbatim %}"<%= value %> %"{% endverbatim %},
-			barValueSpacing: 1,
-			barStrokeWidth: 1,
-			scaleShowGridLines: false
-		});
-
-		function updatePlayerListVisibility(data) {
+			tooltipTemplate: {% verbatim %}"<%= value %> %";{% endverbatim %};,
+			1,
+                    barStrokeWidth: 1,
+			scaleShowGridLines: false;
+    })
+    function updatePlayerListVisibility(data) {
 			// Server is On or Starting
 			if(data == 1 || data == 3) {
 				$("#stats_players").show();
@@ -370,6 +369,7 @@
 				}
 			}
 		{% endif %}
-	});
+        }
+        )
 </script>
 {% endblock %}

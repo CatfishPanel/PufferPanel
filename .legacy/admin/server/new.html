@@ -189,8 +189,8 @@
 		$("#noPorts").hide();
 		$("#server_ip").change(function() {
 			var ip = $(this).val().replace(/\./g, "\\.");
-			$("[id^=node_]").hide().prop("disabled", true);;
-			$("#node_"+ip).show().prop("disabled", false);
+            $("[id^=node_]").hide().prop("disabled", true);
+            $("#node_"+ip).show().prop("disabled", false);
 		});
 	}
 	function updateList(){
