@@ -6,3 +6,6 @@
 
 meteor-platform
 tap:i18n
+twbs:bootstrap
+iron:router
+fortawesome:fontawesome

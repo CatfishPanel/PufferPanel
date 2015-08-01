@@ -1,0 +1,46 @@
+<template name="navbar">
+    <div class="navbar navbar-default">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/index">{{ settings.company_name }}</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav hidden-md hidden-lg">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{_ "sidebar.acc_actions"}} <b
+                            class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/account">{{_ "sidebar.settings"}}</a></li>
+                        <li><a href="/totp">{{_ "sidebar.totp_settings"}}</a></li>
+                        <li><a href="/index">{{_ "sidebar.servers"}}</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{_ 'string.language'}}<b
+                            class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/language/de">Deutsch</a></li>
+                        <li><a href="/language/en">English</a></li>
+                        <li><a href="/language/es">Espa&ntilde;ol</a></li>
+                        <li><a href="/language/fr">Fran&ccedil;ais</a></li>
+                        <li><a href="/language/it">Italiano</a></li>
+                        <li><a href="/language/pl">Polski</a></li>
+                        <li><a href="/language/pt">Portugu&ecirc;s</a></li>
+                        <li><a href="/language/ru">&#1088;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a></li>
+                        <li><a href="/language/se">Svenska</a></li>
+                        <li><a href="/language/zh">&#20013;&#22269;&#30340;?</a></li>
+                    </ul>
+                </li>
+                <li class="hidden-sm hidden-md hidden-lg"><a href="/auth/logout">{{_ 'string.logout'}}</a></li>
+                <li class="hidden-xs"><a href="/auth/logout"><i class="fa fa-power-off"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</template>
