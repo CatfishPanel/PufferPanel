@@ -1,8 +1,10 @@
 <template name="layout">
     <div class="container">
         {{> navbar }}
-        {{> sidebar}}
-        {{>yield }}
+        <div class="row">
+            {{> sidebar}}
+            {{>yield }}
+        </div>
         {{> footer }}
     </div>
 </template>
