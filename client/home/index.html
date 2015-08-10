@@ -16,10 +16,24 @@
 			</thead>
 			<tbody>
 				<!-- Servers Here -->
+				{{#each servers}}
+        			{{> serverListing}}
+				{{/each}}
 			</tbody>
 		</table>
 	</div>
 	<script type="text/javascript">
 		$("#sidebar_links").find("a[href='/index']").addClass('active');
 	</script>
+</template>
+
+<template name="serverListing">
+	<tr>
+		<td></td>
+		<td>{{name}}</td>
+		<td>{{location}}</td>
+		<td>{{node}}</td>
+		<td>{{ip}}:{{port}}</td>
+		<td></td>
+	</tr>
 </template>
