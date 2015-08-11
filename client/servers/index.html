@@ -1,0 +1,39 @@
+<template name="serversIndex">
+	<div class="col-md-9">
+		<div class="alert alert-info">
+			You are viewing this server listing as an admin. As such, all servers installed on the system are displayed. Any servers that you are set as the owner of are marked with a green dot to the left of their name.
+		</div>
+		<table class="table table-striped table-bordered table-hover">
+			<thead>
+				<tr>
+					<th></th>
+					<th>{{_ 'string.name'}}</th>
+					<th>{{_ 'string.location'}}</th>
+					<th>{{_ 'string.node'}}</th>
+					<th>{{_ 'string.connect'}}</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- Servers Here -->
+				{{#each servers}}
+        			{{> serverListing}}
+				{{/each}}
+			</tbody>
+		</table>
+	</div>
+	<script type="text/javascript">
+		$("#sidebar_links").find("a[href='/']").addClass('active');
+	</script>
+</template>
+
+<template name="serverListing">
+	<tr>
+		<td></td>
+		<td>{{name}}</td>
+		<td>{{location}}</td>
+		<td>{{node}}</td>
+		<td>{{ip}}:{{port}}</td>
+		<td></td>
+	</tr>
+</template>
