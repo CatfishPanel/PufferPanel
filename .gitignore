@@ -19,6 +19,7 @@ src/cache/*
 !src/cache/uploads/.githold
 config.json
 app/languages/*.json
+i18n/raw/*.json
 
 # nodejs files
 node_modules/*
