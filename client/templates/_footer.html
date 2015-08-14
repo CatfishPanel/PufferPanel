@@ -4,12 +4,6 @@
             <div class="col-md-8 col-xs-6">
                 <p>{{{_ 'footer.license'}}}<br/>{{{_ 'footer.version' '0.9.0 Alpha'}}}</p>
             </div>
-            <div class="col-md-4 col-xs-6">
-                <p class="pull-right">Page Rendered in <span id="p_render_time">...</span> seconds.</p>
-            </div>
         </div>
     </div>
-    <script type="text/javascript">
-        $("#p_render_time").html(parseInt(new Date().getTime() - pageRenderStart) / 1000);
-    </script>
 </template>

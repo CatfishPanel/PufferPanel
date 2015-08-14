@@ -37,8 +37,10 @@
                         <li><a class="btn language-button" language="zh">&#20013;&#22269;</a></li>
                     </ul>
                 </li>
-                <li class="hidden-sm hidden-md hidden-lg"><a href="{{pathFor 'authLogout'}}">{{_ 'string.logout'}}</a></li>
-                <li class="hidden-xs"><a href="{{pathFor 'authLogout'}}"><i class="fa fa-power-off"></i></a></li>
+                {{#if isAuthed}}
+                    <li class="hidden-sm hidden-md hidden-lg"><a href="{{pathFor 'authLogout'}}">{{_ 'string.logout'}}</a></li>
+                    <li class="hidden-xs"><a href="{{pathFor 'authLogout'}}"><i class="fa fa-power-off"></i></a></li>
+                {{/if }}
             </ul>
         </div>
     </div>

@@ -9,3 +9,5 @@ tap:i18n
 twbs:bootstrap
 iron:router
 fortawesome:fontawesome
+accounts-base
+accounts-password
