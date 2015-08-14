@@ -2,8 +2,12 @@
     <div class="container">
         {{> navbar }}
         <div class="row">
-            {{> sidebar}}
-            {{>yield }}
+            <div class="col-md-3 hidden-xs hidden-sm" id="sidebar_links">
+                {{> sidebar}}
+            </div>
+            <div class="col-md-9">
+                {{>yield }}
+            </div>
         </div>
         {{> footer }}
     </div>

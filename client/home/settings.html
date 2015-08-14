@@ -1,2 +1,121 @@
 <template name="homeSettings">
+    <div class="row">
+        <div class="col-md-6">
+            <h3 class="nopad">{{_ 'settings.change_pass' }}</h3>
+            <hr/>
+            <form action="/account/update/password" method="post">
+                <div class="form-group">
+                    <label for="p_password" class="control-label">{{_ 'settings.current_pass' }}</label>
+
+                    <div>
+                        <input type="password" class="form-control" name="p_password"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="p_password_new" class="control-label">{{_ 'settings.new_pass' }}</label>
+
+                    <div>
+                        <input type="password" class="form-control" name="p_password_new"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="p_password_new_2"
+                           class="control-label">{{_ 'settings.new_pass' }} {{_ 'string.again' }}</label>
+
+                    <div>
+                        <input type="password" class="form-control" name="p_password_new_2"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div>
+                        <input type="submit" class="btn btn-primary btn-sm" value="{{_ 'settings.change_pass' }}"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <h3 class="nopad">{{_ 'settings.update_email' }}</h3>
+            <hr/>
+            <form action="/account/update/email" method="post">
+                <div class="form-group">
+                    <label for="email" class="control-label">{{_ 'settings.new_email' }}</label>
+
+                    <div>
+                        <input type="text" class="form-control" name="newemail"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="control-label">{{_ 'settings.current_pass' }}</label>
+
+                    <div>
+                        <input type="password" class="form-control" name="password"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div>
+                        <input type="submit" class="btn btn-primary btn-sm" value="{{_ 'settings.update_email' }}"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Login Notification</h3>
+            <hr/>
+            <form action="/account/update/notifications" method="post">
+                <div class="row">
+                    <div class="col-md-6 nopad">
+                        <div class="form-group">
+                            <h4>Success</h4>
+
+                            <div class="radio">
+                                <label class="alt-label">
+                                    <input type="radio" name="e_s" value="1"
+                                           checked={{notify_login_s}}/>{{_ 'settings.notify.email_me' }}
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label class="alt-label">
+                                    <input type="radio" name="e_s" value="0"
+                                           checked={{notify_login_s}}/>{{_ 'settings.notify.no_email_me' }}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <h4>Failed</h4>
+
+                            <div class="radio">
+                                <label class="alt-label">
+                                    <input type="radio" name="e_f" value="1"
+                                           checked={{notify_login_f}}/>{{_ 'settings.notify.email_me' }}
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label class="alt-label">
+                                    <input type="radio" name="e_f" value="0"
+                                           checked={{notify_login_f}}/>{{_ 'settings.notify.no_email_me' }}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="control-label">{{_ 'settings.current_pass' }}</label>
+
+                    <div>
+                        <input type="password" class="form-control" name="password"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div>
+                        <input type="submit" class="btn btn-primary btn-sm"
+                               value="{{_ 'settings.update_preferences' }}"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 </template>
