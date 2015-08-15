@@ -1,22 +1,18 @@
 <template name="authLogin">
     <div class="col-md-6">
         <form action="/auth/login" method="POST" id="login-form">
-            <legend>{{ _ 'login.login_h1' }}</legend>
+            <legend>{{_ 'login.login_h1' }}</legend>
             <fieldset>
                 <div class="form-group">
-                    <label for="email" class="control-label">{{ _ 'string.email' }}</label>
-
+                    <label for="email" class="control-label">{{_ 'string.email' }}</label>
                     <div>
-                        <input type="text" class="form-control" name="email" id="email"
-                               placeholder="{{ _ 'string.email' }}"/>
+                        <input type="text" class="form-control" name="email" id="email" placeholder="{{_ 'string.email' }}"/>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="login-password" class="control-label">{{ _ 'string.password' }}</label>
-
+                    <label for="login-password" class="control-label">{{_ 'string.password' }}</label>
                     <div>
-                        <input type="password" class="form-control" name="password" id="password"
-                               placeholder="{{ _ 'string.password' }}"/>
+                        <input type="password" class="form-control" name="password" id="password" placeholder="{{_ 'string.password' }}"/>
                     </div>
                 </div>
                 <div class="form-group">
@@ -26,8 +22,8 @@
                 </div>
                 <div class="form-group">
                     <div>
-                        <input type="submit" class="btn btn-primary btn-sm" value="{{ _ 'string.login' }}"/>
-                        <a class="btn btn-default btn-sm button" href="{{pathFor 'authReset'}}">{{ _ 'string.reset_password' }}</a>
+                        <input type="submit" class="btn btn-primary btn-sm" value="{{_ 'string.login' }}"/>
+                        <a class="btn btn-default btn-sm button" href="{{pathFor 'authReset'}}">{{_ 'string.reset_password' }}</a>
                     </div>
                 </div>
             </fieldset>
