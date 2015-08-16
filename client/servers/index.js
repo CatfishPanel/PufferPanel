@@ -1,6 +1,6 @@
 Meteor.subscribe('servers');
 
-Template.serversIndex.helpers({
+Template.serverIndex.helpers({
     servers: function () {
       return Servers.find();
     }
