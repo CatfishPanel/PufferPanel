@@ -47,6 +47,13 @@
                     <li class="hidden-xs">
                         <a href="{{pathFor 'authLogout'}}"><i class="fa fa-power-off"></i></a>
                     </li>
+                {{else}}
+                    <li class="hidden-sm hidden-md hidden-lg">
+                        <a href="{{pathFor 'authLogin'}}">{{_ 'string.login'}}</a>
+                    </li>
+                    <li class="hidden-xs">
+                        <a href="{{pathFor 'authLogin'}}"><i class="fa fa-power-off"></i></a>
+                    </li>
                 {{/if }}
             </ul>
         </div>

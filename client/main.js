@@ -5,3 +5,8 @@ Template.navbar.events({
         Meteor.call('changeLanguage', $(e.currentTarget).attr('language'), function(err, response) {});
     }
 });
+
+Template.registerHelper("isAuthed", function() {
+        return isUserAuthed();
+    }
+);
