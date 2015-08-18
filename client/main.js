@@ -7,6 +7,6 @@ Template.navbar.events({
 });
 
 Template.registerHelper("isAuthed", function() {
-        return isUserAuthed();
+        return Auth.isUserAuthed();
     }
 );
