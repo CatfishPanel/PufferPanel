@@ -34,10 +34,7 @@ TestSettingsModel.update = function (updates, next) {
         _.extend(setting, { value: newValue });
         return callback();
 
-    }, function (err) {
-        return next(err);
-    });
-
+    }, next);
 };
 
 module.exports = TestSettingsModel;

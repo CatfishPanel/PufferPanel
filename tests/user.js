@@ -101,6 +101,7 @@ describe('Controller/User', function () {
             it('should update password', function () {
 
                 User.updatePassword(userId, userCurrentPassword, newUserPassword, function (err, response) {
+
                     Assert.isTrue(!err);
                     Assert.isUndefined(response);
                 });

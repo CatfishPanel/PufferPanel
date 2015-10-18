@@ -22,14 +22,12 @@ TestActionsModel.reset = function () {
 TestActionsModel.select = function (data, next) {
 
     return next(null, _.findWhere(_fakeData, criteria));
-
 };
 
 TestActionsModel.create = function (data, next) {
 
     _fakeData.push(fields);
     return next();
-
 };
 
 TestActionsModel.deleteId = function (id, next) {
@@ -39,7 +37,6 @@ TestActionsModel.deleteId = function (id, next) {
         return server.id === id;
     });
     return next();
-
 };
 
 module.exports = TestActionsModel;
