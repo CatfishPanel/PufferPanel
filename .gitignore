@@ -9,3 +9,4 @@ jsdoc
 coverage/*
 
 coverage.html
+*.log
