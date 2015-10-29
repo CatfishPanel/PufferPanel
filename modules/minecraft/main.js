@@ -6,7 +6,7 @@ ServerApi.registerType('minecraft', {
         method: 'GET',
         handler: function (request, response, server) {
 
-            response.view('minecraft/index.html');
+            response.view('minecraft/index.html', { server: server });
         }
     }
 });
